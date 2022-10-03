@@ -1,0 +1,5 @@
+First I ran  → eval $(ssh-agent) to see the PID of the ssh-agent, then using ssh-add I added 
+private key passphrase to ssh-agent.
+ 
+More specifically the ssh-agent outputs the environment variable that I needed to connect, 
+as “eval” loads the variables to the terminal environment.

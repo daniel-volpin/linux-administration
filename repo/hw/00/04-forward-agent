@@ -1,0 +1,4 @@
+Based on man ssh_config, when using ForwardAgent one should use it carefully, 
+as users that have the ability to bypass permissions set on files on the hosting server
+can access the local agent easily just throught the forwarded connection. This means that theoretically, an attacker can also perform operations on the keys that will let them authenticate using 
+the identities that the users loaded to the agent.
