@@ -140,3 +140,120 @@ exit
 nanod .ssh/id_ed25519
 nano .ssh/config
 exit
+git add .
+ls
+ls -al
+cd nswi106-volpind/
+ls -al
+cd .ssh
+ls -al
+cd ..
+ls -al
+cd ..
+ls -al
+cd .ssh
+ls -al
+cd ..
+ls -al
+cd ..
+ls
+cd volpind
+ls -al
+cd tomkos
+cd volpind
+pwd
+ls
+cd ..
+cd tomkos
+cd vo
+cd volpind
+ls -al
+cd nswi106-volpind/
+rm -rf .ssh
+cd ..
+cp -R .ssh nswi106-volpind/
+cd nswi106-volpind/
+ls -al
+cd ..
+cp -R repo /home/volpind
+pwd
+ls a-l
+ls -al
+cp -R nswi106-volpind/repo /home/volpind
+ls -al
+rm -rf nswi106-volpind/
+cd repo/
+ls -al
+cd ..
+ls -al
+git init
+ls -al
+git add .
+git status
+git commit -m "modified current git older'
+"
+git push origin master
+git remote add origin git@github.com:dvolpin29/nswi106-volpind.git
+git status
+git push -u origin master
+exit
+ssh volpind@10.10.50.7
+ls -al
+cd repo/
+cd hw/00/
+ls -al
+nano 05-os 
+nano 06-feedback
+ls -al
+cd ../..
+cd ~
+ls
+ls -al
+nano .ssh/config 
+exit
+ssh volpind@10.10.50.7
+ssh volpind@10.10.50.9
+ssh volpind@10.10.50.11
+ssh volpind@10.10.50.10
+ssh volpind@10.10.50.7
+ssh volpind@10.10.50.9
+ssh volpind@10.10.50.10
+ssh volpind@10.10.50.7
+ssh-copy-id volpind@10.10.50.7
+ssh volpind@10.10.50.7
+ssh-copy-id volpind@10.10.50.9
+ssh-copy-id volpind@10.10.50.10
+ssh-copy-id volpind@10.10.50.11
+ssh JumpBox
+exit
+ls -al 
+cd .ssh
+ls
+nano config 
+ssh JumpBox
+ssh JumpBox 
+ssh JumpBox
+ssh volpind@linux.ms.mff.cuni.cz
+d ..
+cd ..
+ssh-copy-id -i ~/.ssh/id_ed25519.pub
+ssh-keygen -p -f ~/.ssh/id_ed25519
+ssh volpind@linux.ms.mff.cuni.cz
+ssh daniel
+ssh JumpBox
+exit
+ssh volpind@10.10.50.7
+ssh-copy-id volpind@linux.ms.mff.cuni.cz
+cd .ssh
+ls -al
+cat authorized_keys 
+nano config 
+exit
+nano .ssh/config 
+ eval `ssh-agent`
+ ssh-add
+ kill $SSH_AGENT_PID
+exit
+ssh-copy-id volpind@linux.msh.mff.cuni.cz
+ssh-copy-id volpind@linux.ms.mff.cuni.cz
+exit
