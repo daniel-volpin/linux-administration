@@ -257,3 +257,22 @@ exit
 ssh-copy-id volpind@linux.msh.mff.cuni.cz
 ssh-copy-id volpind@linux.ms.mff.cuni.cz
 exit
+ls -al
+git add .
+git commit -m "made all connections passwordless"
+git push -u origin master
+ssh daniel
+exit
+nano .ssh/config 
+ssh daniel
+ssh second-hop
+exit
+nano .ssh/config 
+ssh 10.10.50.7
+nano .ssh/config 
+ssh 10.10.50.7
+ssh 10.10.50.9
+ssh 10.10.50.10
+ssh 10.10.50.11
+cd ~/
+exit
