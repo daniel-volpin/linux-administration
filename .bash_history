@@ -276,3 +276,8 @@ ssh 10.10.50.10
 ssh 10.10.50.11
 cd ~/
 exit
+git add .
+git status
+git commit -m "added additional proxy jumps"
+git push -u origin master
+exit
