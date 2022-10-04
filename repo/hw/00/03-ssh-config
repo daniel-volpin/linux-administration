@@ -7,22 +7,18 @@ Host server1
 	HostName 10.10.50.7
 	ProxyJump proxyHost
 	User volpind
-	Port 22
 
 Host server2
 	HostName 10.10.50.9
         ProxyJump proxyHost
         User volpind
-	Port 22
 
 Host server3
 	HostName 10.10.50.10
         ProxyJump proxyHost
         User volpind
-	Port 22
 
 Host server4
 	HostName 10.10.50.11
         ProxyJump proxyHost
         User volpind
-	Port 22
