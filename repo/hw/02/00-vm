@@ -32,3 +32,28 @@ command grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=G
 correctly.
 
 Following this, I exited, rebooted and was able to boot into my UEFI system.
+
+## flashdrive.raw ##
+
+First command was to load qemu with a new flashdrive.raw, and OVMF.fd file:
+
+qemu-system-x86_64 -cdrom archlinux-2022.10.01-x86_64.iso -m 4G -smp cpus=4 -accel kvm -drive 
+format=raw,file=vmImages/flashdrive.raw -drive if=pflash,format=raw,file=vmImages/OVMF_2.fd
+
+After that, I partitioned /dev/sda1 and made sure its a GPT format, and created a single 
+parition. 
+
+Following this i followed how to format LUKS parition:
+
+cryptsetup luksFormat --type luks2 /dev/sda1
+cryptsetup luksOpen /dev/sda1 root
+mkfs -t ext4 /dev/mapper/root
+
+mkdir /mnt
+mount /dev/mapper/root /mnt
+
+Now I created the protected file in the new /mnt point.
+
+Last, I unmounted /mnt, and executed cryptsetup close root.
+
+
