@@ -1,0 +1,36 @@
+volpind/repo/hw/00/03-ssh-config
+
+> Host proxyHost
+> 	User volpind
+> 	HostName linux.ms.mff.cuni.cz
+> 	Port 22
+
+Port 22 is default.
+
+>
+> Host server1
+> 	HostName 10.10.50.7
+> 	ProxyJump proxyHost
+> 	User volpind
+>
+> Host server2
+> 	HostName 10.10.50.9
+>         ProxyJump proxyHost
+>         User volpind
+>
+> Host server3
+> 	HostName 10.10.50.10
+>         ProxyJump proxyHost
+>         User volpind
+>
+> Host server4
+> 	HostName 10.10.50.11
+>         ProxyJump proxyHost
+>         User volpind
+
++10 points (maximum)
+
+Total = 10+0 points
+
+If anything seems wrong, let me know (mail). Thanks :).
+                                      - David
