@@ -1,0 +1,59 @@
+## BIOS ##
+
+The first step to installing either the UEFI or BIOS files is to create an img.raw file and fallocate a
+certain size to the file image. After doing so, you need to use the qemu-system-x86_64 with a -drive option
+to load the image file into the hypervisor. 
+
+After, opening archlinux there are several steps that were need to be done. First, you need to create a partition
+on the the file that we laoded using fdisk. Second, we need to make the file system in the newly create drive, 
+using mkfs. Third, we mount the root drive, so we could install the base package using the pacstrap package on our
+/mnt drive. Following that, we generate the fstab file, and change to root using arch-chroot /mnt. While we are on
+the root we can create a password on our new syste.
+
+The last step is to use GRUB to install our Archlinux. First, I needed to download grub using pacman, and then use 
+the grab-install command while pointing to our root folder /dev/sda. Second, we need to create a config file which will
+be loaded at the start of the boot. This was done using grub-mkconfig. 
+
+Last, you exit root mode, reboot the system, and open the existing OS.
+
+## UEFI ##
+
+Now, these steps are similar to what needs to be done for the UEFI system too, however, where it differs in is how you
+boot into qemu and in how your parition your drives.
+
+First, I made a copy of the following file "/usr/share/edk2-ovmf/x64/OVMF.fd" into my current directory and made sure it
+was writable. Second, I created a second img2.raw file which will be loaded. Then, when i ran the qemu command I added the 
+following command -drive if=pflash,format=raw,file=OVMF.fd next to the img2.raw.
+
+After ArchLinux is opened I needed to use fdisk again, but this time I changed the parition table to GPT, and then I created
+two paritions of type EFI, where one was for the efi system, and the other for our arch linux system. From there I followed
+the same steps use previosuly, until I had to install grub. When I got to the point of installing grub, I had to use the following
+command grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB, while making sure that I mounted everything
+correctly.
+
+Following this, I exited, rebooted and was able to boot into my UEFI system.
+
+## flashdrive.raw ##
+
+First command was to load qemu with a new flashdrive.raw, and OVMF.fd file:
+
+qemu-system-x86_64 -cdrom archlinux-2022.10.01-x86_64.iso -m 4G -smp cpus=4 -accel kvm -drive 
+format=raw,file=vmImages/flashdrive.raw -drive if=pflash,format=raw,file=vmImages/OVMF_2.fd
+
+After that, I partitioned /dev/sda1 and made sure its a GPT format, and created a single 
+parition. 
+
+Following this i followed how to format LUKS parition:
+
+cryptsetup luksFormat --type luks2 /dev/sda1
+cryptsetup luksOpen /dev/sda1 root
+mkfs -t ext4 /dev/mapper/root
+
+mkdir /mnt
+mount /dev/mapper/root /mnt
+
+Now I created the protected file in the new /mnt point.
+
+Last, I unmounted /mnt, and executed cryptsetup close root.
+
+
