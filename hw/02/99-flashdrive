@@ -1,4 +1,14 @@
-/home/volpind/flashdrive.raw does not exist on c
-/home/volpind/flashdrive.raw does not exist on d
-/home/volpind/flashdrive.raw does not exist on e
-/home/volpind/flashdrive.raw does not exist on f
+Found /home/volpind/flashdrive.raw on c!
+NAME      MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+loop0       7:0    0  256M  0 loop 
+`-loop0p1 259:1    0  254M  0 part 
+++ losetup -fP --show /home/volpind/flashdrive.raw
++ loopdev=/dev/loop0
++ lsblk /dev/loop0
++ part=/dev/loop0p1
++ '[' -e /dev/loop0p1 ']'
++ cryptsetup open --type luks --key-file psks/volpind /dev/loop0p1 flashdrive
++ mount /dev/mapper/flashdrive mnt
+This is a protected file.
++ cat mnt/protected
++ set +x
