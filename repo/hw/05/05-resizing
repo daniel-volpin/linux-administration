@@ -1,0 +1,27 @@
+## Method 1
+
+For resising I have only used the fdisk and dd commands to resize the partition tables.
+
+First, I started with the ext4 partition, I used the following command to make a backup of it:
+
+dd if=/dev/sda2 of=sda2.img
+
+Once I have done this, I deleted the the partition, and created a new partition that is of size 100MB, that was I can later increase the size of the btrfs partition. Once I have done that, I created a new partition of size 300MB. Next, I used the dd command again to copy the data back:
+
+dd if=sda2.img of=/dev/sda2
+
+Once this was done, I went back to fdisk and deleted the the previously 100MB partition. Also, I delete the sda2.img backup and created a new backup of the btrfs partition data:
+
+dd if=/dev/sda1 of=sda1.img
+
+Following that, I created a new partition of size 500MB and again used the dd command to bring the data back.
+
+## Method 2
+
+Another thing that I noticed which I could have done, which I played with too, and realized it is a possibility too but might be a bit risky is actually using the sector numbers so you don't have to create an in betwene partiton.
+
+For example, I know that at the start the first partition starts from sector 2048, and ends at 821,248. So the total number of sectors for 400MB is 819,200, if you divide it by 400, we get that each sector is 2048kiB.
+
+The next parition starts from 821,249, so if we want to extend it by 100MB, we should make sure that the next parition should start at 821,249 + 204,800 = 1,026,049, and it should end at 614,400 + 1,026,049 = 1,640,0449.
+
+Therefore, we can dd /dev/sda2, delete parition, and make a new one based on sectors when using fdisk. Then we do the same for /dev/sda1, and for /dev/sda2 we can also uses the sectors. Which will resullt in 500MB, and 300MB.
