@@ -6,6 +6,8 @@ First, I started with the ext4 partition, I used the following command to make a
 
 dd if=/dev/sda2 of=sda2.img
 
+Then I used resize2fs on sda2.img since it's an ext4, while using the -M 300MB flag, to resize the filesystem size.
+
 Once I have done this, I deleted the the partition, and created a new partition that is of size 100MB, that was I can later increase the size of the btrfs partition. Once I have done that, I created a new partition of size 300MB. Next, I used the dd command again to copy the data back:
 
 dd if=sda2.img of=/dev/sda2
@@ -13,6 +15,8 @@ dd if=sda2.img of=/dev/sda2
 Once this was done, I went back to fdisk and deleted the the previously 100MB partition. Also, I delete the sda2.img backup and created a new backup of the btrfs partition data:
 
 dd if=/dev/sda1 of=sda1.img
+
+
 
 Following that, I created a new partition of size 500MB and again used the dd command to bring the data back.
 
