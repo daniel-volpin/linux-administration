@@ -1,0 +1,24 @@
+# No fingerprints were provided in volpind/hw/03/01-ssh-fingerprints-gw!
+# Without the fingerprints, nothing is secure.
+-----------------------
+Authorized Access only!
+-----------------------
+ssh running on 10.0.0.45:22
+-----------------------
+Authorized Access only!
+-----------------------
++100 points (maximum) is awarded by default, points deduced where (and if) appropriate below:
+# DNS is set up correctly
+# NTP is running
+# Can ping google.com
+# dcepelik can use sudo
+# This is the fallback locale configuration provided by systemd.
+
+LANG="en_US.UTF-8"
+# Locale is set in /etc/locale.gen
+# Local time zone is configured in /etc/localtime
+
+Total = 100+0 points
+
+If anything seems wrong, let me know (mail). Thanks :).
+                                      - David
