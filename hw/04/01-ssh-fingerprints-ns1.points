@@ -1,0 +1,16 @@
+volpind/hw/04/01-ssh-fingerprints-ns1
+
+> 10.0.35.2 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBuXMuzSXsW82F9VBixYJ9ne5DX0YzySBQ1ZFEKNFaZN
+> 10.0.35.2 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC19KfX/hACnz3XnJMOPtNFNfVQ0HZ2jWkUoGJ1Sf+VOcms9/9yWNl6i3IjEzA6GTJ3O+GpZv1W0Ne9+IHFek08EUBFeoYxVY96xjps0EXQ4pi$
+> 10.0.35.2 ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBHaajzkTLmu50hQLT0liNyK1yuJVPMTPg4u/ITMVbCXl1v0EQf2KJSlex1ehB/aR2w3hR4q7SDf$
+
+Are these really fingerprints? Please provide the fingerprints, I won't
+be connecting to the VMs without them. (This is a separate issue, it
+seems to me I can't use ssh anyway.)
+
+Also, please take care to always add a newline at the end of your files :).
+
+Total = 0+0 points
+
+If anything seems wrong, let me know (mail). Thanks :).
+                                      - David

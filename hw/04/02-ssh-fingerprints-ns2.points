@@ -1,0 +1,12 @@
+volpind/hw/04/02-ssh-fingerprints-ns2
+
+> 10.0.135.2 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIK4Q4pOAV+3gNvUVxb6nwC7F7/+LzUk8/bGIJjvY0j8T
+> 10.0.135.2 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDPFIdlyW23CGhBUcShkYmHj6j+AQxrWo/8Qfflreob7vhbb/otoz6XoRPcpf+K5WBEcVo24d0vLe0iRDk5f0+Jo3FpDFZvi8+tSXKiaaFXTj$
+> 10.0.135.2 ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBNQlE/S5HZufOE4hjpJ4RUd8pJ8KXK+zoxeoZc+KJBXg4Giqxo5bv6BJb3ejzuiMUqbshI50+s$
+
+Same here.
+
+Total = 0+0 points
+
+If anything seems wrong, let me know (mail). Thanks :).
+                                      - David

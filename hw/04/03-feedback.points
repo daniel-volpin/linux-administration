@@ -1,0 +1,23 @@
+volpind/hw/04/03-feedback
+
+> I enjoyed this assignment, as by the end of the assignment completiton I felt that I got a better grasp
+> of how vde's are used to connect additional virtual network cards for the computers to use.
+
+Good to hear :).
+
+> One thing, which as always is not your fault, but is the Arch Linux guide fault (: is that the guide really has many additional info that one does not need to use, or does not explain, therefore, it would be useful if certain commands that we needed to use to set our ip tables, could be just generally explained.
+>
+> For example, in section 2.3 in the Internet when one needed to use the iptables to set the NAT, we had to use the following command "iptables -t nat -A POSTROUTING -o internet0 -j MASQUERADE", now in our case interent0 would be ens3, and for "iptables -A FORWARD -i net0 -o internet0 -j ACCEPT", net0 would be ens4. However, I don't think it was clear at all, and only after being able to do it properly i understood exaclty what it did, but defintly took me longer than it should, and so i think if in the lab guides you could slightly explain what the point of those commands, without necesserially hinting at exactly what we need to do, it would be easier.
+
+You're right, this part wasn't explained a bit. Unfortunately, we need
+to be able to access the internet _before_ we are able to explain what
+this does. Unless it's clear by now (from what Ondra explained about
+firewall), maybe we could chat about this shortly after next lab? Happy
+to explain what this does.
+
+> Otherwise, everything was good!
+
+Total = 0+0 points
+
+If anything seems wrong, let me know (mail). Thanks :).
+                                      - David
