@@ -1,0 +1,14 @@
+volpind/hw/05/00-systemd-user
+
+> Finished setting systemd units.
+
+The dependencies seem a bit weird to me. Why doesn't gw depend on both
+VDE switches, and instead ns2-vde depends on ns1-vde? Why do ns1 and ns2
+depend on gw?
+
++15 points.
+
+Total = 15+0 points
+
+If anything seems wrong, let me know (mail). Thanks :).
+                                      - David

@@ -1,0 +1,41 @@
+volpind/hw/05/05-resizing
+
+> For resizing I have only used the fdisk and dd commands to resize the partition tables.
+>
+> First, I started with the ext4 partition, I used the following command to make a backup of the data:
+>
+> dd if=/dev/sda2 of=sda2.img
+>
+> After that: fdisk /dev/sda, deleted 2nd partition. Created new parition of size 100M. Removed ext4 signature.
+> Then created another new parition of 300M.
+
+Technically this isn't necessary. You could just dd the ext4 off, delete
+both partitions and create a 500 MiB Btrfs partition. (I.e., you don't
+need the temporary 100 MiB partition helper. But it's not wrong.)
+
+> Then I used resize2fs on sda2.img since it's an ext4, while using the -M 300MB flag, to resize the filesystem size.
+>
+> dd if=sda2.img of=/dev/sda3
+>
+> Once this was done, I went back to fdisk and deleted the previously 100MB partition. Also, I delete the sda2.img and created a new backup of the btrfs partition data:
+>
+> dd if=/dev/sda1 of=sda1.img
+>
+> Following that, I created a new partition of size 500MB, without deleting the signature.
+>
+> Now, I need to grow the btrfs image, this can be done in the following way:
+>
+> mount /dev/sda1 /mnt
+> btrfs filesystem resize 500m /mnt.
+
++15 points, this is perfect!
++10 bonus points for living on a budget.
+
+> Last, just for my OCD, since I have /dev/sda1 and /dev/sda3. I used fdisk to remove /dev/sda3 without removing the signature/data, and then created a new partition of size 300M.
+
++10 bonus points for going the extra mile :).
+
+Total = 15+20 points
+
+If anything seems wrong, let me know (mail). Thanks :).
+                                      - David

@@ -1,0 +1,11 @@
+[Unit]
+Description=ns2 VDE
+Requires=ns1-vde.service
+After=ns1-vde.service
+
+[Service]
+Type=forking
+ExecStart=vde_switch -sock /home/volpind/vde/sw2.sock -daemon
+
+[Install]
+WantedBy=default.target

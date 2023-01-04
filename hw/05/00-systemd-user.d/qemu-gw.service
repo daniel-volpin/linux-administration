@@ -1,0 +1,11 @@
+[Unit]
+Description=running gw QEMU
+Requires=ns2-vde.service
+After=ns2-vde.service
+
+[Service]
+Type=forking
+ExecStart=qemu-system-x86_64 -m 4G -smp cpus=4 -accel kvm -drive format=raw,file=/home/volpind/vmImages/img1.raw -drive if=pflash,format=raw,file=/home/volpind/vmImages/OVMF_1.fd -vnc :4135 -nic vde,sock=/tmp/vde-backbone.sock,mac=52:54:00:36:69:01 -nic vde,sock=/home/volpind/vde/sw1.sock,mac=52:54:00:36:69:04 -nic vde,sock=/home/volpind/vde/sw2.sock,mac=52:52:00:36:69:05 -daemonize
+
+[Install]
+WantedBy=default.target

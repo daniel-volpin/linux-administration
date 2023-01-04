@@ -1,0 +1,11 @@
+[Unit]
+Description=running QEMU ns1
+Requires=qemu-gw.service
+After=qemu-gw.service
+
+[Service]
+Type=forking
+ExecStart=qemu-system-x86_64 -m 4G -smp cpus=4 -accel kvm -drive format=raw,file=/home/volpind/vmImages/ns1.raw -drive if=pflash,format=raw,file=/home/volpind/vmImages/OVMF_1.fd -nic vde,sock=/home/volpind/vde/sw1.sock,mac=52:54:00:36:69:02 -daemonize
+
+[Install]
+WantedBy=default.target

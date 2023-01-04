@@ -1,0 +1,10 @@
+[Unit]
+Description=ns1 VDE
+After=network.target
+
+[Service]
+Type=forking
+ExecStart=vde_switch -sock /home/volpind/vde/sw1.sock -daemon
+
+[Install]
+WantedBy=default.target
