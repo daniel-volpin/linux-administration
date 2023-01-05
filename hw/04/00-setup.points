@@ -34,15 +34,31 @@ Authorized Access only!
 # 10.0.35.2 ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBHaajzkTLmu50hQLT0liNyK1yuJVPMTPg4u/ITMVbCXl1v0EQf2KJSlex1ehB/aR2w3hR4q7SDf$-----------------------
 Authorized Access only!
 -----------------------
-Connection timed out during banner exchange
-Connection to UNKNOWN port 65535 timed out
+Warning: Permanently added '10.0.35.2' (ED25519) to the list of known hosts.
+------------------
+Connecting to ns1!
+------------------
+-----------------------
+Authorized Access only!
+-----------------------
+------------------
+Connecting to ns1!
+------------------
 # 10.0.135.2 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIK4Q4pOAV+3gNvUVxb6nwC7F7/+LzUk8/bGIJjvY0j8T
 # 10.0.135.2 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDPFIdlyW23CGhBUcShkYmHj6j+AQxrWo/8Qfflreob7vhbb/otoz6XoRPcpf+K5WBEcVo24d0vLe0iRDk5f0+Jo3FpDFZvi8+tSXKiaaFXTj$
 # 10.0.135.2 ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBNQlE/S5HZufOE4hjpJ4RUd8pJ8KXK+zoxeoZc+KJBXg4Giqxo5bv6BJb3ejzuiMUqbshI50+s$-----------------------
 Authorized Access only!
 -----------------------
-Connection timed out during banner exchange
-Connection to UNKNOWN port 65535 timed out
+Warning: Permanently added '10.0.135.2' (ED25519) to the list of known hosts.
+------------------
+Connecting to ns2!
+------------------
+-----------------------
+Authorized Access only!
+-----------------------
+------------------
+Connecting to ns2!
+------------------
 
 ### Checking gw (same checks as the last time, plus some more)...
 -----------------------
@@ -50,34 +66,55 @@ Authorized Access only!
 -----------------------
 # DNS is set up correctly
 # NTP is running
--5 points, can't ping Quad9 public DNS over IPv4 (9.9.9.9)
+# Can ping Quad9 public DNS over IPv4 (9.9.9.9)
 # dcepelik can use sudo
 # This is the fallback locale configuration provided by systemd.
 
 LANG="en_US.UTF-8"
 # Locale is set in /etc/locale.gen
 # Local time zone is configured in /etc/localtime
-# Can't ping ns1 over IPv4 (10.0.35.2)
-# Can't ping ns2 over IPv4 (10.0.135.2)
++14 points, can ping ns1 over IPv4 (10.0.35.2)
++14 points, can ping ns2 over IPv4 (10.0.135.2)
 
 ### Checking ns1...
 -----------------------
 Authorized Access only!
 -----------------------
-Connection timed out during banner exchange
-Connection to UNKNOWN port 65535 timed out
+------------------
+Connecting to ns1!
+------------------
+# DNS is set up correctly
+# NTP is running
++8 points, can ping Quad9 public DNS over IPv4 (9.9.9.9)
+# dcepelik can use sudo
+# This is the fallback locale configuration provided by systemd.
+
+LANG="en_US.UTF-8"
+# Locale is set in /etc/locale.gen
+# Local time zone is configured in /etc/localtime
++14 points, can ping gw over IPv4 (10.0.0.45)
++14 points, can ping ns2 over IPv4 (10.0.135.2)
 
 ### Checking ns2...
 -----------------------
 Authorized Access only!
 -----------------------
-Connection timed out during banner exchange
-Connection to UNKNOWN port 65535 timed out
+------------------
+Connecting to ns2!
+------------------
+# DNS is set up correctly
+# NTP is running
++8 points, can ping Quad9 public DNS over IPv4 (9.9.9.9)
+# dcepelik can use sudo
+# This is the fallback locale configuration provided by systemd.
 
-Daniel, are your ns1 and ns2 running? Could you check please? Are they
-on the correct IPs?
+LANG="en_US.UTF-8"
+# Locale is set in /etc/locale.gen
+# Local time zone is configured in /etc/localtime
++14 points, can ping gw over IPv4 (10.0.0.45)
++14 points, can ping ns1 over IPv4 (10.0.35.2)
 
-Total = 5+0 points
+Total = 100+0 points
 
 If anything seems wrong, let me know (mail). Thanks :).
                                       - David
