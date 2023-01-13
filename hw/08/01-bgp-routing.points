@@ -1,0 +1,92 @@
+# /etc/ssh/ssh_host_ecdsa_key.pub
+# 256 SHA256:3q+ShslVwcrFYENKrnd6sGUTLd9RRqHVySal/sWf0+s root@gw (ECDSA)
+# 
+# /etc/ssh/ssh_host_ed25519_key.pub
+# 256 SHA256:uAQpBJYE3USbAXQsRHHUdGjupvKVT4k2i5UkABbT8FY root@gw (ED25519)
+# 
+# /etc/ssh/ssh_host_rsa_key.pub
+# 3072 SHA256:JBzN3XpHHnjKCgar6W1q256UPJiX/Z80/myO1iOfIhU root@gw (RSA)
+# 
+# 
+# ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHaSZ49DfIcdRiWuf/fwNyREsfoETwx/3Mj08F9+n9zB
+# 
+# ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCyFDNg12PSG3dOQHV+au7gW75XttXY/Xy2YrtofLX8cL1x1YPgT+VEmmsDEke1u5io2o+JF8bNx8mXbuMjvCmHNi8dCmImBALpoGK9nLfkm3sj51IWyQLn5z8wJoc/WsgQZtyDVOZCgZFV00JEWMZGk/4fzQ9XpePpZBDlkPgqzXuBHvo+6pC31F8F4WEKoVnJsU5womTyPohca1WI0Aj9Tjuz1LkiLxEEWZaU7/70kEhNx/iSIOJ6L1hLykP0iuxuMQKl11u/f+YUOYijDOqH3HW1OMBfyfW8lsymWPeg3YGHSXx/vVFxnDb+a6KVUl7ufzc6uEMEZ2MLXTB9a6ZdhNl5dnsTbKFSfedkn+5E1nlXnti0Mi1L1O1txF2VGoZwMBAxwkL5IdlUxvQnsqkIm89gNenGuIGQBqLjSj0fxOMXNzRkCHuQEmdQrxce6MdgheOoQZKKXu1RiBy3Jt5wJdW11WjNevTgatKVjADCIkIwslhAVkN26cFAORssUtc=
+# 
+# ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBOGB6eBq9RXkU56cItDDcxnxvJBdiZFi5/t8yS9eSQVUJUzv8fJ8W1PyWybDEA0GVNhqCBJPKyeEp+tY1Gdp4KE=
+channel 0: open failed: connect failed: No route to host
+stdio forwarding failed
+kex_exchange_identification: Connection closed by remote host
+Connection closed by UNKNOWN port 65535
+ssh not running on 10.0.0.165:22
+-----------------------
+Authorized Access only!
+-----------------------
+ssh running on 10.0.0.45:22
+-----------------------
+Authorized Access only!
+-----------------------
+-----------------------
+Authorized Access only!
+-----------------------
+# 10.0.35.2 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBuXMuzSXsW82F9VBixYJ9ne5DX0YzySBQ1ZFEKNFaZN
+# 10.0.35.2 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC19KfX/hACnz3XnJMOPtNFNfVQ0HZ2jWkUoGJ1Sf+VOcms9/9yWNl6i3IjEzA6GTJ3O+GpZv1W0Ne9+IHFek08EUBFeoYxVY96xjps0EXQ4pi$
+# 10.0.35.2 ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBHaajzkTLmu50hQLT0liNyK1yuJVPMTPg4u/ITMVbCXl1v0EQf2KJSlex1ehB/aR2w3hR4q7SDf$-----------------------
+Authorized Access only!
+-----------------------
+------------------
+Connecting to ns1!
+------------------
+-----------------------
+Authorized Access only!
+-----------------------
+------------------
+Connecting to ns1!
+------------------
+# 10.0.135.2 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIK4Q4pOAV+3gNvUVxb6nwC7F7/+LzUk8/bGIJjvY0j8T
+# 10.0.135.2 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDPFIdlyW23CGhBUcShkYmHj6j+AQxrWo/8Qfflreob7vhbb/otoz6XoRPcpf+K5WBEcVo24d0vLe0iRDk5f0+Jo3FpDFZvi8+tSXKiaaFXTj$
+# 10.0.135.2 ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBNQlE/S5HZufOE4hjpJ4RUd8pJ8KXK+zoxeoZc+KJBXg4Giqxo5bv6BJb3ejzuiMUqbshI50+s$-----------------------
+Authorized Access only!
+-----------------------
+------------------
+Connecting to ns2!
+------------------
+-----------------------
+Authorized Access only!
+-----------------------
+------------------
+Connecting to ns2!
+------------------
+
+### Checking gw
+-----------------------
+Authorized Access only!
+-----------------------
++11 points, Can ping dcepelik's ns1 VM on 10.0.5.2
+
+### Checking ns1...
+-----------------------
+Authorized Access only!
+-----------------------
+------------------
+Connecting to ns1!
+------------------
++11 points, Can ping dcepelik's ns1 VM on 10.0.5.2
+
+### Checking ns2...
+-----------------------
+Authorized Access only!
+-----------------------
+------------------
+Connecting to ns2!
+------------------
++11 points, Can ping dcepelik's ns1 VM on 10.0.5.2
+
+### Checking from dcepelik's ns1...
++11 points, dcepelik's ns1 can ping your gw on 10.0.0.45
++11 points, dcepelik's ns1 can ping your ns1 on 10.0.35.2
++11 points, dcepelik's ns1 can ping your ns2 on 10.0.135.2
+
+Total = 66+0 points
+
+If anything seems wrong, let me know (mail). Thanks :).
+                                      - David
